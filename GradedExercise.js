@@ -23,10 +23,11 @@ const itemSchema = require('./itemSheetSchema.json');
 const itemInfoValidator = ajv.compile(itemSchema)
 
 var storage = cloudinaryStorage({
-    cloudinary: cloudinary,
-    folder: '', // give cloudinary folder where you want to store images
-    allowedFormats: ['jpg', 'png'],
-  });
+  cloudinary: cloudinary,
+  folder: '', // give cloudinary folder where you want to store images
+  allowedFormats: ['jpg', 'png'],
+});
+
 
   var parser = multer({ storage: storage });
 
