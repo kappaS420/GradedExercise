@@ -46,6 +46,11 @@ passport.use(new BasicStrategy(           //used for basic html authentication
   }
 ));
 
+app.get('/listings', (req, res) =>{         //starting page
+    res.send('Hello and welcome to my API')
+})
+
+
 app.get('/listings', (req, res) =>{         //fetches all of the listings from item database
     res.send(itemDB)
 })
