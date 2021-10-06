@@ -13,7 +13,6 @@ const BasicStrategy = require('passport-http').BasicStrategy
 const bodyParser = require('body-parser')
 app.use(bodyParser.json());
 
-app.set('port', (process.env.PORT || 80));
 
 
 let userDB = []; // create database for users
@@ -162,6 +161,6 @@ app.post('/createListing', passport.authenticate('basic', {session: false}), upl
 })
 
 
-app.listen(app.get('port'), function() {
-    console.log('Node app is running on port', app.get('port'));
+app.listen(process.env.PORT || 3000, function() {
+    console.log('Node app is running on port');
 });
