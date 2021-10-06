@@ -46,7 +46,7 @@ passport.use(new BasicStrategy(           //used for basic html authentication
   }
 ));
 
-app.get('/listings', (req, res) =>{         //starting page
+app.get('/', (req, res) =>{         //starting page
     res.send('Hello and welcome to my API')
 })
 
