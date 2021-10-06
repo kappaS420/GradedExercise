@@ -28,10 +28,10 @@ var storage = cloudinaryStorage({
   folder: '', // give cloudinary folder where you want to store images
   allowedFormats: ['jpg', 'png'],
 });
-*/
+
 
   var parser = multer({ storage: storage });
-
+*/
 passport.use(new BasicStrategy(           //used for basic html authentication
     (username, password, done) =>{
     console.log('Basic strategy params, username: ' + username + ' password: ' + password);
